@@ -6,6 +6,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_ACCESS_TOKEN })
 const owner = process.env.GITHUB_REPO_OWNER
 const repo = process.env.GIT_REPO_NAME
 const folder = process.env.POSTS_FOLDER
+const collection = process.env.COLLECTION_NAME
 
 exports.handler = async (event) => {
 	if (event.httpMethod === 'GET') {
@@ -51,7 +52,7 @@ exports.handler = async (event) => {
 	return {
 		statusCode: 201,
 		headers: {
-			Location: `https://app.pagescms.org/${owner}/${repo}/main/content/${folder}/edit/${encodeURIComponent(filePath)}`,
+			Location: `https://app.pagescms.org/${owner}/${repo}/main/content/${collection}/edit/${encodeURIComponent(filePath)}`,
 		},
 	}
 }
