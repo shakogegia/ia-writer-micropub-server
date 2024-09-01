@@ -1,5 +1,5 @@
-const slugify = require('slugify')
-const { Octokit } = require('@octokit/rest')
+import slugify from 'slugify'
+import { Octokit } from '@octokit/rest'
 
 const octokit = new Octokit({ auth: process.env.GITHUB_ACCESS_TOKEN })
 
