@@ -18,6 +18,8 @@ exports.handler = async (event) => {
 	}
 
 	const body = JSON.parse(event.body)
+	console.log('Body:', body)
+	console.log('Content:', body.properties.content[0])
 
 	const date = new Date()
 	const title = body.properties.name[0]
@@ -38,6 +40,8 @@ exports.handler = async (event) => {
 		fileContent.push('category: note')
 		fileContent.push('---')
 	}
+
+	fileContent.push(content)
 
 	const filePath = `${folder}/${filename}.md`
 
