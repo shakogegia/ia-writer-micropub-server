@@ -6,6 +6,9 @@
 
 Deploy your own version of this site using the button below. This will clone the repository in your own GitHub account, and deploy it to Netlify.
 
+**Before you deploy, make sure to set up the environment variables in your Netlify site settings**
+**Do not forget to update the full url of your site in the `./public/index.html` file**
+
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/shakogegia/ia-writer-micropub-server)
 
 ## Install and run this example locally
